@@ -17,6 +17,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'haml', '~> 5.0', '>= 5.0.4'
 gem 'bootstrap-sass', '3.3.6'
 gem 'jquery-rails'
+gem 'money-rails', '~>1.12'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -50,8 +51,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  # gem 'guard'
-  # gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
+  gem 'faker'
 end
 
 group :test do

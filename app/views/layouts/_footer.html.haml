@@ -1,0 +1,14 @@
+/ Footer
+%footer.navbar-fixed-bottom.black
+  .container-fluid
+    / Grid row
+    .row.row-align
+      .col-md-6
+        %p.text-white © 2015 by you
+      .col-md-6.text-right
+        .row.ml
+          .col-md-1
+            %p.text-white Currency
+          .col-md-8
+            = form_tag({}, {:method => :get}) do
+              = select_tag(:currency, options_for_select(Money::Currency.table.keys.map(&:upcase)), :onchange => "this.form.submit();")
