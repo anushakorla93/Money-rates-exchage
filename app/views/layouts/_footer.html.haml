@@ -10,5 +10,6 @@
           .col-md-1
             %p.text-white Currency
           .col-md-8
-            = form_tag({}, {:method => :get}) do
-              = select_tag(:currency, options_for_select(Money::Currency.table.keys.map(&:upcase)), :onchange => "this.form.submit();")
+            = form_tag(update_all_products_path, method: :put) do |f|
+              .field
+                = select_tag(:currency, options_for_select(currency_names), :onchange => "this.form.submit();")

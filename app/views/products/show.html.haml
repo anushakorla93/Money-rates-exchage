@@ -4,8 +4,8 @@
   %p= @product.description
 
   %strong
-    = @product.price_in
-    EUR
+    = @product.price_in.exchange_to(@product.currency)
+    = @product.currency
 
   = link_to 'Shut up and take my money!', '#'
 

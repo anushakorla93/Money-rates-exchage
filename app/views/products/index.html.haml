@@ -6,8 +6,8 @@
       %h2= product.name
       %p= product.description
       %strong
-        = product.price_in
-        EUR
+        = product.price_in.exchange_to(product.currency)
+        = product.currency
 
       = link_to 'Show more', product
 
